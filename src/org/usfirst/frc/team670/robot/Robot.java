@@ -1,6 +1,6 @@
-
 package org.usfirst.frc.team670.robot;
 
+import edu.wpi.first.wpilibj.AnalogGyro;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -24,9 +24,10 @@ public class Robot extends IterativeRobot {
 
 	public static final DriveBase driveBase = new DriveBase();
 	public static OI oi;
-	public static NetworkTable GaffCV;
 	public static Camera camera;
-
+	private static NetworkTable GaffCV;
+	private static AnalogGyro gyro;
+	
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
 
@@ -38,7 +39,9 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 		oi = new OI();
 		camera = new Camera();
-		GaffCV = NetworkTable.getTable("GaffCV");
+		GaffCV = NetworkTable.getTable(RobotMap.tableName);
+		gyro = new AnalogGyro(RobotMap.gyro);
+		
 		chooser.addDefault("Do Nothing", new Cancel());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
@@ -83,6 +86,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousPeriodic() {
+		putData();
 		Scheduler.getInstance().run();
 	}
 
@@ -101,6 +105,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
+		putData();
 		Scheduler.getInstance().run();
 	}
 
@@ -110,5 +115,10 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void testPeriodic() {
 		LiveWindow.run();
+	}
+	
+	public void putData(){
+		String s = GaffCV.getString("data", "NULL");
+		SmartDashboard.putString("Data", s);
 	}
 }

@@ -1,14 +1,31 @@
 package org.usfirst.frc.team670.robot;
 
-import edu.wpi.first.wpilibj.buttons.Button;
-
-import org.usfirst.frc.team670.robot.commands.ExampleCommand;
+import edu.wpi.first.wpilibj.Joystick;
 
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
+
+	Joystick left = new Joystick(RobotMap.leftStick);
+	Joystick right = new Joystick(RobotMap.rightStick);
+	Joystick operator = new Joystick(RobotMap.operatorStick);
+	
+	public Joystick getLeftStick() {
+		// TODO Auto-generated method stub
+		return left;
+	}
+	
+	public Joystick getRightStick() {
+		// TODO Auto-generated method stub
+		return right;
+	}
+	
+	public Joystick getOperatorStick() {
+		// TODO Auto-generated method stub
+		return operator;
+	}
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
 	//// joystick.
