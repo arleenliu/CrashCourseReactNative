@@ -8,7 +8,6 @@ package org.usfirst.frc.team670.robot;
  */
 public class RobotMap {
 
-	public static int gyro = 0;
 	public static String tableName = "GaffCV";
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
@@ -17,9 +16,9 @@ public class RobotMap {
 	public static int rightMotor1 = 3;
 	public static int rightMotor2 = 4;
 
-	public static int leftStick = 0;
-	public static int rightStick = 1;
-	public static int operatorStick = 2;
+	public static int leftStick = 1;
+	public static int rightStick = 2;
+	public static int operatorStick = 0;
 	// If you are using multiple modules, make sure to define both the port
 	// number and the module. For example you with a rangefinder:
 	// public static int rangefinderPort = 1;

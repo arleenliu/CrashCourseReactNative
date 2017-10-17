@@ -1,6 +1,5 @@
 package org.usfirst.frc.team670.robot;
 
-import edu.wpi.first.wpilibj.AnalogGyro;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -9,7 +8,9 @@ import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+import org.usfirst.frc.team670.robot.commands.AnglePivot;
 import org.usfirst.frc.team670.robot.commands.Cancel;
+import org.usfirst.frc.team670.robot.commands.DriveDistance;
 import org.usfirst.frc.team670.robot.subsystems.Camera;
 import org.usfirst.frc.team670.robot.subsystems.DriveBase;
 
@@ -26,7 +27,6 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	public static Camera camera;
 	private static NetworkTable GaffCV;
-	private static AnalogGyro gyro;
 	
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
@@ -40,10 +40,11 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		camera = new Camera();
 		GaffCV = NetworkTable.getTable(RobotMap.tableName);
-		gyro = new AnalogGyro(RobotMap.gyro);
 		
 		chooser.addDefault("Do Nothing", new Cancel());
-		// chooser.addObject("My Auto", new MyAutoCommand());
+		chooser.addObject("Drive Forward 1 foot", new DriveDistance(12));
+		chooser.addObject("Pivot 90 degrees to right", new AnglePivot(90));
+		chooser.addObject("Pivot 90 degrees to left", new AnglePivot(-90));
 		SmartDashboard.putData("Auto mode", chooser);
 	}
 
