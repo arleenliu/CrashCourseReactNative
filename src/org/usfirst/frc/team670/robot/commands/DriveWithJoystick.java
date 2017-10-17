@@ -1,6 +1,7 @@
 package org.usfirst.frc.team670.robot.commands;
 
 import org.usfirst.frc.team670.robot.Robot;
+import org.usfirst.frc.team670.robot.utils.Movement;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -9,6 +10,8 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class DriveWithJoystick extends Command {
 
+	private double a = 0.5;
+	
     public DriveWithJoystick() {
         requires(Robot.driveBase);
     }
@@ -19,7 +22,7 @@ public class DriveWithJoystick extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.driveBase.drive(Robot.oi.getLeftStick().getY(), -Robot.oi.getRightStick().getY());
+    	Robot.driveBase.drive(Movement.sensitivity(Robot.oi.getLeftStick().getY(),a), Movement.sensitivity(Robot.oi.getRightStick().getY(),a));
     }
 
     // Make this return true when this Command no longer needs to run execute()
