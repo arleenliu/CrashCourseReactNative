@@ -30,7 +30,7 @@ public class Robot extends IterativeRobot {
 	
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
-
+	
 	/**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
@@ -40,7 +40,6 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		camera = new Camera();
 		GaffCV = NetworkTable.getTable(RobotMap.tableName);
-		
 		chooser.addDefault("Do Nothing", new Cancel());
 		chooser.addObject("Drive Forward 1 foot", new DriveDistance(12));
 		chooser.addObject("Pivot 90 degrees to right", new AnglePivot(90));
