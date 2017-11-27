@@ -25,8 +25,7 @@ public class Robot extends IterativeRobot {
 
 	public static final DriveBase driveBase = new DriveBase();
 	public static OI oi;
-	public static Camera camera;
-	private static NetworkTable GaffCV;
+	public static NetworkTable GaffCV;
 	
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
@@ -38,7 +37,6 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		oi = new OI();
-		camera = new Camera();
 		GaffCV = NetworkTable.getTable(RobotMap.tableName);
 		chooser.addDefault("Do Nothing", new Cancel());
 		chooser.addObject("Drive Forward 1 foot", new DriveDistance(12));

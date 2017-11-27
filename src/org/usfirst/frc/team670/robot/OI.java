@@ -1,6 +1,10 @@
 package org.usfirst.frc.team670.robot;
 
+import org.usfirst.frc.team670.robot.commands.Cancel;
+
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -11,6 +15,14 @@ public class OI {
 	Joystick left = new Joystick(RobotMap.leftStick);
 	Joystick right = new Joystick(RobotMap.rightStick);
 	Joystick operator = new Joystick(RobotMap.operatorStick);
+	Button Red_Follower = new JoystickButton(operator, 1);
+	Button cancel = new JoystickButton(operator, 2);
+	
+	public OI() 
+	{
+		Red_Follower.whenPressed(new org.usfirst.frc.team670.robot.commands.Red_Follower(0.2, 15));
+		cancel.whenPressed(new Cancel());
+	}
 	
 	public Joystick getLeftStick() {
 		// TODO Auto-generated method stub
@@ -26,14 +38,13 @@ public class OI {
 		// TODO Auto-generated method stub
 		return operator;
 	}
+			
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
 	//// joystick.
 	// You create one by telling it which joystick it's on and which button
 	// number it is.
 	// Joystick stick = new Joystick(port);
-	// Button button = new JoystickButton(stick, buttonNumber);
-
 	// There are a few additional built in buttons you can use. Additionally,
 	// by subclassing Button you can create custom triggers and bind those to
 	// commands the same as any other Button.
