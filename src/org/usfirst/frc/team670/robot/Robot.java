@@ -11,7 +11,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team670.robot.commands.AnglePivot;
 import org.usfirst.frc.team670.robot.commands.Cancel;
 import org.usfirst.frc.team670.robot.commands.DriveDistance;
-import org.usfirst.frc.team670.robot.subsystems.Camera;
 import org.usfirst.frc.team670.robot.subsystems.DriveBase;
 
 /**
@@ -116,7 +115,7 @@ public class Robot extends IterativeRobot {
 	}
 	
 	public void putData(){
-		String s = GaffCV.getString("data", "NULL");
-		SmartDashboard.putString("Data", s);
+		//String s = GaffCV.getString("data", "NULL");
+		//SmartDashboard.putString("Data", s);
 	}
 }
