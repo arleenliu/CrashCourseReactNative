@@ -32,7 +32,6 @@ public class DriveBase extends Subsystem {
 		rightTalon2 = new TalonSRX(RobotMap.rightMotor2);
 		leftTalon2.set(ControlMode.Follower, RobotMap.leftMotor1);
 		rightTalon2.set(ControlMode.Follower, RobotMap.rightMotor1);
-
 	}
 
 	public void drive(double left, double right) {
