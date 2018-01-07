@@ -37,12 +37,12 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		oi = new OI();
-		GaffCV = NetworkTable.getTable(RobotMap.tableName);
 		chooser.addDefault("Do Nothing", new Cancel());
 		chooser.addObject("Drive Forward 1 foot", new DriveDistance(12));
 		chooser.addObject("Pivot 90 degrees to right", new AnglePivot(90));
 		chooser.addObject("Pivot 90 degrees to left", new AnglePivot(-90));
 		SmartDashboard.putData("Auto mode", chooser);
+		
 	}
 
 	/**
