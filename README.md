@@ -1,22 +1,27 @@
 # Power Up!
 Code for Team 670's Steamworks Robot
 --------------------------
-Robot Code
+**Robot Code**
 
-- [x] DriveBase
-  - [x] Drive With Joystick
-- [x] |---PID authodrive
-- [x] |---PID auto pivot
-- [x] Shooter (low goal)
-- [x] |---Shooter joystick control
-- [x]	|---Shooter toggle control
-- [x] Intake 
-- [x] |---Joystick control (y-axis)
-- [x] Grappler (rope climber)
-- [x] |---Joystick control (x-axis)
-- [x] Camera
-- [x]	|---Update Camera command
-- [x]	|---Switch input
+- [ ] DriveBase
+  - [ ] Drive With Joystick
+        - [ ] Field Centric
+        - [ ] Driver Centric
+  - [ ] Drive With Joystick
+- [ ] Elevator
+  - [ ] Up/Down movement
+  - [ ]	Sensor to record position
+  - [ ] Reset position to 0
+  - [ ] Position Control
+- [ ] Intake/Shooter
+  - [ ] T.B.D
+- [ ] Camera
+  - [ ] Raspberry pi software
+  - [ ] Increase speed
+  - [ ] Make stream accessible from SmartDashboard/DriverStation
+
+**Sensors/Inputs**
+
 
 **Autonomous Code**
 
@@ -37,8 +42,13 @@ Guides
 
 [HERE](https://wpilib.screenstepslive.com/s/4485/m/13503/l/144986-programming-your-radio-for-home-use)
 
+**Steps to install the Motor Controller, CTRE interface**
+
+[HERE](https://github.com/CrossTheRoadElec/Phoenix-Documentation#installing-phoenix-framework-onto-your-frc-robot)
 --------------------------
 Updates
 
 **(2/12/17):** 
-FIRST is nice, but as always, updates disable us for long periods of time. The SRX CANTalon libraries have been disabled, so now need to go to: http://www.ctr-electronics.com/control-system/hro.html#product_tabs_technical_resources, to install the update library (Only on Windows) --> NEVER OPEN THIS PROJECT ON A MAC OR PC WITHOUT THIS PROGRAM INSTALLED
+Libraries needed for building/compiling the robot code: (install this software prior to opening the robot software, or you risk breaking everything):
+- http://www.ctr-electronics.com/control-system/hro.html#product_tabs_technical_resources
+- https://www.pdocs.kauailabs.com/navx-mxp/software/roborio-libraries/java/
