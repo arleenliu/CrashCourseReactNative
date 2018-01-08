@@ -14,7 +14,7 @@ Code for Team 670's Steamworks Robot
   - [ ] Reset position to 0
   - [ ] Position Control
 - [ ] Intake/Shooter
-  - [ ] T.B.D
+  - [ ] Basic motor activation (Control from operator joystick)
 - [ ] Climber
   - [ ] Motor Activation (Controlling from operator joystick)
   - [ ] Vision alignment with the central position
