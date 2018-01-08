@@ -37,11 +37,15 @@ NOTE: Remember your try catches, in case the robot sensor is unplugged
 
 **Autonomous Code**
 
-- [x] Do nothing (0pt.)
-- [x] Move to line (5pts.)
-- [x] Gear Auto (60 pts.)
-- [x] |---All gear sides w/ vision (x3)
-- [x]	|---All sides gear w/o vision (x1)
+- [ ] Do Nothing Command
+- [ ] Left Side
+  - [ ] Logic Portion (Decisioning process)
+  - [ ] Complete schematic to approach, and place box, with ultrasonic input
+- [ ] Right Side
+  - [ ] Logic Portion (Decisioning process)
+  - [ ] Complete schematic to approach, and place box, with ultrasonic input
+- [ ] Center
+    - TBD
 
 --------------------------
 Guides
