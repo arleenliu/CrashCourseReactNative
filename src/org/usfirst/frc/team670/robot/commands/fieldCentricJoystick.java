@@ -38,7 +38,7 @@ public class fieldCentricJoystick extends Command {
 
 		/* At this point, Joystick X/Y (strafe/forwrd) vectors have been */
 		/* rotated by the gyro angle, and can be sent to drive system */
-		Robot.driveBase.drive(strafe, forwrd);
+		Robot.driveBase.drive(strafe, forwrd); 
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
