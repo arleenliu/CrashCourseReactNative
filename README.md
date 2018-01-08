@@ -45,7 +45,10 @@ NOTE: Remember your try catches, in case the robot sensor is unplugged
   - [ ] Logic Portion (Decisioning process)
   - [ ] Complete schematic to approach, and place box, with ultrasonic input
 - [ ] Center
-    - TBD
+  - [ ] Go for baseline
+  ~~- [ ] IF navXMicro works
+            - [ ] Complete schematic to approach, and place box, with ultrasonic input~~
+
 
 --------------------------
 Guides
