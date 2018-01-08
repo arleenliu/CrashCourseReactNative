@@ -28,11 +28,11 @@ NOTE: Remember your try catches, in case the robot sensor is unplugged
   - [ ] DriveStraight
   - [ ] Pivoting procedures
 - [ ] Vision
-    If offboard processor:
+    - If offboard processor:
         - [ ] Detect box location, and pickup
         - [ ] Do 3d modeling
         - [ ] Send command to network tables to the robot/serial connection
-    If Onboard Roborio (as command)
+    - If Onboard Roborio (as command)
         - [ ] Detect box location, and pickup
 
 **Autonomous Code**
