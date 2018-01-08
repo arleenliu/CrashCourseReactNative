@@ -15,8 +15,12 @@ Code for Team 670's Steamworks Robot
   - [ ] Position Control
 - [ ] Intake/Shooter
   - [ ] T.B.D
+- [ ] Climber
+  - [ ] Motor Activation (Controlling from operator joystick)
+  - [ ] Vision alignment with the central position
 - [ ] Camera
   - [ ] Program subsystem from robot (On roborio)
+  - [ ] Align with the climber using vision processing 
 
 **Sensors/Inputs**
 NOTE: Remember your try catches, in case the robot sensor is unplugged
