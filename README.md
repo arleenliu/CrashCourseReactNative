@@ -7,7 +7,7 @@ Code for Team 670's Steamworks Robot
   - [ ] Drive With Joystick
     - [ ] Field Centric
     - [ ] Driver Centric
-  - [ ] Drive With Joystick
+  - [ ] Four TalonSRX (Follower control)
 - [ ] Elevator
   - [ ] Up/Down movement
   - [ ]	Sensor to record position
@@ -41,7 +41,7 @@ NOTE: Remember your try catches, in case the robot sensor is unplugged
 
 **Autonomous Code**
 
-- [ ] Do Nothing Command
+- [X] Do Nothing Command
 - [ ] Left Side
   - [ ] Logic Portion (Decisioning process)
   - [ ] Complete schematic to approach, and place box, with ultrasonic input
