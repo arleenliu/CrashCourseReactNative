@@ -5,8 +5,8 @@ Code for Team 670's Steamworks Robot
 
 - [ ] DriveBase
   - [ ] Drive With Joystick
-        - [ ] Field Centric
-        - [ ] Driver Centric
+    - [ ] Field Centric
+    - [ ] Driver Centric
   - [ ] Drive With Joystick
 - [ ] Elevator
   - [ ] Up/Down movement
