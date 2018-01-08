@@ -16,12 +16,24 @@ Code for Team 670's Steamworks Robot
 - [ ] Intake/Shooter
   - [ ] T.B.D
 - [ ] Camera
-  - [ ] Raspberry pi software
-  - [ ] Increase speed
-  - [ ] Make stream accessible from SmartDashboard/DriverStation
+  - [ ] Program subsystem from robot (On roborio)
 
 **Sensors/Inputs**
+NOTE: Remember your try catches, in case the robot sensor is unplugged
 
+- [ ] Elevator
+  - [ ] Choose sensor (Laser/Ultrasonic/BNO055)
+  - [ ] Once chosen, program in Elevator subsystem
+- [ ] navXMicro
+  - [ ] DriveStraight
+  - [ ] Pivoting procedures
+- [ ] Vision
+    If offboard processor:
+        - [ ] Detect box location, and pickup
+        - [ ] Do 3d modeling
+        - [ ] Send command to network tables to the robot/serial connection
+    If Onboard Roborio (as command)
+        - [ ] Detect box location, and pickup
 
 **Autonomous Code**
 
