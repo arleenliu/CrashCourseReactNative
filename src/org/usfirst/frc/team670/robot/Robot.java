@@ -14,6 +14,8 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+import org.usfirst.frc.team670.robot.commands.Pivot;
 import org.usfirst.frc.team670.robot.subsystems.DriveBase;
 
 import com.kauailabs.navx.frc.AHRS;
@@ -49,9 +51,11 @@ public class Robot extends TimedRobot {
 			navXMicro = null;
 		}
 		
+		m_chooser.addDefault("Default Auto", new ExampleCommand());
+		
 		if(navXMicro == null)
 		{
-			//Add the left, right, and center commands
+			m_chooser.addObject("Turn Right 90 degrees", new Pivot(90));
 		}
 		else
 		{
