@@ -15,14 +15,11 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-<<<<<<< HEAD
 import org.usfirst.frc.team670.robot.commands.Pivot;
-=======
 import org.usfirst.frc.team670.robot.commands.Auto_Center;
 import org.usfirst.frc.team670.robot.commands.Auto_Left;
 import org.usfirst.frc.team670.robot.commands.Auto_Right;
 import org.usfirst.frc.team670.robot.commands.CancelCommand;
->>>>>>> 8c184bfab169f8b1dc01849c2e81621a3c86be4b
 import org.usfirst.frc.team670.robot.subsystems.DriveBase;
 
 import com.kauailabs.navx.frc.AHRS;
@@ -58,28 +55,20 @@ public class Robot extends TimedRobot {
 			navXMicro = null;
 		}
 		
-<<<<<<< HEAD
-		m_chooser.addDefault("Default Auto", new ExampleCommand());
-		
-		if(navXMicro == null)
-		{
-			m_chooser.addObject("Turn Right 90 degrees", new Pivot(90));
-=======
 		m_chooser.addDefault("Do Nothing", new CancelCommand());
 		
 		if(navXMicro == null)
 		{
-			m_chooser.addObject("Center Switch Auto", new Auto_Center());
-			m_chooser.addObject("Left Auto", new Auto_Left());
-			m_chooser.addObject("Right Auto", new Auto_Right());
->>>>>>> 8c184bfab169f8b1dc01849c2e81621a3c86be4b
+			
 		}
 		else
 		{
-			//m_chooser.addObject("Baseline", new BaselineCommand());
-			//Add drive to baseline with time command
+			m_chooser.addObject("Turn Right 90 degrees", new Pivot(90, 'r'));
+			m_chooser.addObject("Center Switch Auto", new Auto_Center());
+			m_chooser.addObject("Left Auto", new Auto_Left());
+			m_chooser.addObject("Right Auto", new Auto_Right());
 		}
-				
+		
 		SmartDashboard.putData("Auto mode", m_chooser);
 	}
 
