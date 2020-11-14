@@ -1,0 +1,6 @@
+module Pods_CrashCourseDemo {
+  umbrella header "Pods-CrashCourseDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
